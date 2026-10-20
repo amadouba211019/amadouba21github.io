@@ -1,351 +1,1605 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amadou Ba — Économiste | Économétrie & analyse de données</title>
-<meta name="description" content="Portfolio d'Amadou Ba — Économie appliquée, économétrie et analyse de données.">
+
+<title>Amadou Ba — Économiste | Analyse économique et données</title>
+<meta name="description" content="Portfolio d'Amadou Ba, titulaire d'un Master 2 en Analyse économique et quantitative. Économétrie, analyse de données, finances publiques et suivi-évaluation.">
+<meta name="theme-color" content="#17251f">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Amadou Ba — Économiste">
 <meta property="og:description" content="Économie appliquée, économétrie et analyse de données.">
-<meta property="og:image" content="https://amadouba211019.github.io/AmadouBa/photo.jpg">
-<meta property="og:url" content="https://amadouba211019.github.io/AmadouBa/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='bold'>AB</text></svg>">
+<meta property="og:url" content="https://amadouba211019.github.io/amadouba21github.io/">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2317251f%22/><text x=%2250%22 y=%2265%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>AB</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
-:root{--black:#111;--white:#fff;--cream:#f5f2ec;--cream-dark:#e9e5dc;--gray:#666;--border:#d8d4cc}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--black);line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-.container{width:min(1180px,90%);margin:auto}
-h1,h2,h3,.logo,.stat-number,.project-number{font-family:"Manrope",system-ui,sans-serif}
+:root {
+  --ink: #17251f;
+  --green: #315d49;
+  --green-light: #e5eee7;
+  --cream: #f7f5ef;
+  --white: #fffefa;
+  --muted: #69736d;
+  --line: #dfdfd5;
+  --gold: #c6a66b;
+  --radius: 16px;
+  --shadow: 0 18px 50px rgba(23,37,31,.07);
+}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(245,242,236,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.08)}
-.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:21px;font-weight:800;letter-spacing:-1px}
-.logo span{font-weight:400}
-.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
-.nav-links a{font-size:14px;font-weight:600;transition:.3s}
-.nav-links a:hover{opacity:.5}
-.burger{display:none;background:none;border:0;font-size:24px;cursor:pointer;color:var(--black);padding:8px}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 100px}
-.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:80px;align-items:center}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:30px}
-.hero h1{font-size:clamp(50px,7vw,95px);line-height:.95;letter-spacing:-3px}
-.hero h1 span{display:block}
-.hero-text{max-width:700px;margin-top:35px;font-size:20px;color:#444}
-.hero-description{max-width:680px;margin-top:18px;color:#555}
-.btn{display:inline-flex;align-items:center;gap:12px;margin-top:35px;padding:15px 22px;background:var(--black);color:#fff;font-size:14px;font-weight:700;transition:.3s}
-.btn:hover{background:#333;transform:translateY(-3px)}
-.hero-skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
-.hero-skills .skill{font-weight:600;background:#fff}
-.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1);border:1px solid var(--border)}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
-/* STATS */
-.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:35px 25px;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none}
-.stat-number{font-size:23px;font-weight:800;margin-bottom:7px}
-.stat-title{font-weight:700}
-.stat p{color:var(--gray);font-size:14px}
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin-inline: auto;
+}
+
+h1, h2, h3, .logo, .stat-number,
+.project-number, .footer-logo {
+  font-family: "Manrope", sans-serif;
+}
+
+::selection {
+  background: var(--green);
+  color: white;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  background: rgba(247,245,239,.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(23,37,31,.09);
+}
+
+.nav-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4e5952;
+  transition: color .2s;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.nav-links .nav-cv {
+  background: var(--green);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 7px;
+}
+
+.nav-links .nav-cv:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+/* ACCUEIL */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 145px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  right: -200px;
+  top: 100px;
+  border: 1px solid rgba(49,93,73,.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 27px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6.5vw, 82px);
+  line-height: 1.08;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--green);
+}
+
+.hero-text {
+  max-width: 620px;
+  margin-top: 26px;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #3f4b44;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hero-description strong {
+  color: var(--ink);
+}
+
+.hero-skills,
+.skills,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.hero-skills {
+  margin-top: 24px;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-skills .skill {
+  background: var(--green-light);
+  border-color: transparent;
+  color: var(--green);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.btn:hover {
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+.btn-cv {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+.hero-photo {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  justify-self: end;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--gold);
+  border-radius: 15px;
+}
+
+.hero-photo img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 5px solid var(--white);
+  box-shadow: var(--shadow);
+}
+
+/* CHIFFRES CLÉS */
+
+.stats {
+  padding: 0;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat {
+  padding: 29px 22px;
+  border-right: 1px solid var(--line);
+}
+
+.stat:first-child {
+  padding-left: 0;
+}
+
+.stat:last-child {
+  border-right: 0;
+}
+
+.stat-number {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  color: var(--green);
+  overflow-wrap: anywhere;
+}
+
+.stat-title {
+  margin-top: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stat p {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
 
 /* SECTIONS */
-section{padding:120px 0}
-.stats{padding:0}
-.section-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:70px}
-.section-number{font-size:12px;font-weight:700;letter-spacing:2px}
-.section-title{font-size:clamp(42px,5vw,70px);line-height:1;letter-spacing:-3px}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:100px}
-.about-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
-.about-text{max-width:760px;font-size:20px}
-.about-text p{margin-bottom:24px}
-.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:35px}
-.skill{padding:8px 13px;border:1px solid var(--border);background:#faf8f4;font-size:13px}
+section {
+  padding: 100px 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 55px;
+}
+
+.section-number {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2.5px;
+}
+
+/* À PROPOS */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr;
+  gap: 75px;
+}
+
+.about-label {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.about-text {
+  max-width: 760px;
+  font-size: 15px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #566159;
+}
+
+.about-text p strong {
+  color: var(--ink);
+}
+
+.skills {
+  margin-top: 25px;
+}
 
 /* PROJETS */
-.projects{border-top:1px solid var(--border)}
-.project{display:grid;grid-template-columns:100px 1fr;gap:30px;padding:45px 0;border-top:1px solid var(--border);transition:.3s}
-.project:last-child{border-bottom:1px solid var(--border)}
-.project:hover{padding-left:12px}
-.project-number{font-size:18px;font-weight:800}
-.project-category{margin-bottom:14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.project h3{font-size:31px;line-height:1.2;letter-spacing:-1px;margin-bottom:18px}
-.project-description{max-width:720px;color:#555;margin-bottom:12px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.tag{padding:6px 9px;border:1px solid var(--border);font-size:12px}
 
-.project-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:10px 16px;background:var(--black);color:#fff;font-size:13px;font-weight:700;transition:.3s}
-.project-link:hover{background:#333;transform:translateY(-3px)}
+.projects {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 25px;
+  padding: 36px 24px;
+  border-top: 1px solid var(--line);
+  border-radius: 10px;
+  transition: background .2s;
+}
+
+.project:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.project:hover {
+  background: #f8f7f1;
+}
+
+.project-number {
+  color: var(--gold);
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.project-category {
+  margin-bottom: 11px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.project h3 {
+  margin-bottom: 14px;
+  font-size: clamp(22px, 3vw, 31px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -.7px;
+}
+
+.project-description {
+  max-width: 760px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tags {
+  margin-top: 18px;
+}
+
+.tag {
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: #526057;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.project-link,
+.lab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  padding: 11px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.project-link {
+  background: var(--green);
+  color: white;
+}
+
+.project-link:hover {
+  background: var(--ink);
+  transform: translateY(-2px);
+}
 
 /* LABS */
-.labs{background:var(--black);color:#fff}
-.labs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#333}
-.lab{min-height:310px;padding:45px;background:var(--black)}
-.lab-number{font-size:12px;opacity:.5}
-.lab h3{font-size:27px;margin:40px 0 18px}
-.lab p{color:#aaa}
-.lab .tag{border-color:#444;color:#bbb}
 
-.lab-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:10px 16px;border:1px solid #fff;color:#fff;font-size:13px;font-weight:700;transition:.3s}
-.lab-link:hover{background:#fff;color:var(--black);transform:translateY(-3px)}
+.labs {
+  background: var(--ink);
+  color: white;
+}
 
-/* FORMATION / EXPERIENCE */
-.education,.experience{border-top:1px solid var(--border)}
-.education-list{border-top:1px solid var(--border)}
-.education-item{display:grid;grid-template-columns:170px 1fr 180px;gap:40px;padding:35px 0;border-bottom:1px solid var(--border)}
-.education-date,.experience-date,.education-place{font-size:14px;color:var(--gray)}
-.education-place,.experience-date{text-align:right}
-.education h3{font-size:24px;margin-bottom:5px}
-.education p,.experience p{color:#555}
-.experience-item{display:grid;grid-template-columns:190px 1fr 120px;gap:40px;padding:40px 0;border-top:1px solid var(--border)}
-.experience-item:last-child{border-bottom:1px solid var(--border)}
-.experience-company{font-weight:700}
-.experience h3{font-size:25px;margin-bottom:10px}
-.experience p{max-width:680px}
+.labs .section-number {
+  color: #b9cbbd;
+}
 
-/* ECRITS */
-.analysis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.analysis-card{padding:40px;border:1px solid var(--border);transition:.3s}
-.analysis-card:hover{background:#fff;transform:translateY(-5px)}
-.analysis-card h3{font-size:27px;margin-bottom:12px}
+.labs .section-title {
+  color: white;
+}
+
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.lab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 330px;
+  padding: 28px;
+  border: 1px solid #34463b;
+  border-radius: 13px;
+  background: #1d3026;
+  transition: transform .2s, border-color .2s;
+}
+
+.lab:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.lab-number {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lab h3 {
+  margin: 26px 0 13px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.lab p {
+  color: #c1cbc3;
+  font-size: 13px;
+}
+
+.lab .tags {
+  margin-top: 18px;
+}
+
+.lab .tag {
+  border-color: #45574b;
+  color: #d5dfd7;
+}
+
+.lab-link {
+  margin-top: auto;
+  padding-top: 22px;
+  color: white;
+}
+
+.lab-link:hover {
+  color: var(--gold);
+}
+
+/* FORMATION */
+
+.education {
+  border-top: 1px solid var(--line);
+}
+
+.education-list {
+  border-top: 1px solid var(--line);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 140px 1fr 175px;
+  gap: 25px;
+  align-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.education-date,
+.education-place {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.education-place {
+  text-align: right;
+}
+
+.education h3 {
+  margin-bottom: 7px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.education p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ÉCRITS */
+
+#ecrits {
+  background: var(--white);
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.analysis-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.analysis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.analysis-card h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.analysis-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* EXPÉRIENCE */
+
+.experience {
+  border-top: 1px solid var(--line);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 170px 1fr 110px;
+  gap: 25px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.experience-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-company {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.experience h3 {
+  margin-bottom: 9px;
+  font-size: 20px;
+}
+
+.experience p {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.experience-date {
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+}
 
 /* CONTACT */
-.contact{background:var(--cream-dark)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.contact h2{font-size:clamp(43px,5vw,70px);line-height:1;letter-spacing:-3px}
-.contact-text{max-width:600px;margin-top:25px;color:#555;font-size:18px}
-.contact-info{display:flex;flex-direction:column;justify-content:center}
-.contact-link{padding:18px 0;border-bottom:1px solid #aaa;font-family:"Manrope",sans-serif;font-size:22px;font-weight:700;transition:.3s;overflow-wrap:anywhere}
-.contact-link:hover{padding-left:10px}
-.social-title{margin-top:50px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
-.socials{display:flex;gap:12px;margin-top:20px}
-.social{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border:1px solid #aaa;font-size:20px;transition:.3s}
-.social:hover{background:var(--black);color:#fff;border-color:var(--black);transform:translateY(-4px)}
 
-/* FOOTER */
-footer{background:var(--black);color:#fff;padding:35px 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:"Manrope",sans-serif;font-weight:800}
-footer p{color:#aaa;font-size:13px}
-
-/* TABLETTE / MOBILE */
-@media(max-width:900px){
-  .burger{display:block}
-  .nav-links{display:none;position:absolute;top:78px;left:0;width:100%;flex-direction:column;align-items:flex-start;gap:0;background:var(--cream);border-bottom:1px solid var(--border)}
-  .nav-links.open{display:flex}
-  .nav-links li{width:100%}
-  .nav-links a{display:block;padding:16px 5%;font-size:16px;border-top:1px solid var(--border)}
-  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:45px}
-  .hero-photo{order:-1;max-width:280px}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:none}
-  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid var(--border)}
-  .labs-grid,.analysis-grid{grid-template-columns:1fr}
-  .education-item,.experience-item{grid-template-columns:1fr;gap:8px}
-  .education-place,.experience-date{text-align:left}
+.contact {
+  background: #e9e9df;
 }
-@media(max-width:600px){
-  section{padding:80px 0}
-  .hero{padding-top:120px;min-height:auto}
-  .hero h1{font-size:46px;letter-spacing:-2px}
-  .hero-text{font-size:17px}
-  .stats-grid{grid-template-columns:1fr}
-  .stat{border-right:none!important;border-top:1px solid var(--border)}
-  .stat:first-child{border-top:none}
-  .section-header{flex-direction:column;margin-bottom:45px}
-  .project{grid-template-columns:45px 1fr;gap:15px}
-  .project h3{font-size:25px}
-  .about-text{font-size:18px}
-  .lab{padding:30px;min-height:auto}
-  .contact-link{font-size:18px}
-  .footer-inner{flex-direction:column;align-items:flex-start;gap:10px}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 75px;
+}
+
+.contact h2 {
+  max-width: 580px;
+  font-size: clamp(39px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+}
+
+.contact-text {
+  max-width: 550px;
+  margin-top: 22px;
+  color: #5b665e;
+  font-size: 15px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-link {
+  padding: 17px 0;
+  border-bottom: 1px solid #c8cbc0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(14px, 2vw, 19px);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  transition: color .2s;
+}
+
+.contact-link:hover {
+  color: var(--green);
+}
+
+.social-title {
+  margin-top: 35px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #c2c7bd;
+  border-radius: 9px;
+  background: rgba(255,255,255,.35);
+  font-size: 17px;
+  transition: all .2s;
+}
+
+.social:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* PIED DE PAGE */
+
+footer {
+  padding: 28px 0;
+  background: var(--ink);
+  color: white;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+footer p {
+  color: #b8c2ba;
+  font-size: 11px;
+}
+
+/* TABLETTES */
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 11px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero-grid {
+    gap: 45px;
+  }
+
+  .labs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lab:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .nav-inner {
+    min-height: 72px;
+  }
+
+  .burger {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    padding: 10px 5% 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a,
+  .nav-links .nav-cv {
+    display: block;
+    padding: 12px 8px;
+    border-radius: 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 120px 0 75px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-photo {
+    order: -1;
+    justify-self: start;
+    max-width: 235px;
+    margin-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 10vw, 64px);
+    letter-spacing: -2.7px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 22px 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  .stat:first-child {
+    padding-left: 14px;
+    border-top: 0;
+  }
+
+  .stat:nth-child(2) {
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .stat:nth-child(4) {
+    border-right: 0;
+  }
+
+  section {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 36px;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .project {
+    grid-template-columns: 34px 1fr;
+    gap: 13px;
+    padding: 26px 8px;
+  }
+
+  .project-number {
+    font-size: 17px;
+  }
+
+  .project h3 {
+    font-size: 23px;
+  }
+
+  .labs-grid,
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab:last-child {
+    grid-column: auto;
+  }
+
+  .lab {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .lab h3 {
+    margin-top: 20px;
+  }
+
+  .education-item,
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 23px 0;
+  }
+
+  .education-place,
+  .experience-date {
+    text-align: left;
+  }
+
+  .contact h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 91%;
+  }
+
+  .hero h1 {
+    font-size: 41px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat,
+  .stat:first-child,
+  .stat:nth-child(2) {
+    padding: 18px 0;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .stat:first-child {
+    border-top: 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 37px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <nav>
-<div class="container nav-inner">
-<a href="#accueil" class="logo">AMADOU <span>BA</span></a>
-<button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-<ul class="nav-links" id="menu">
-<li><a href="#about">À propos</a></li>
-<li><a href="#travaux">Travaux</a></li>
-<li><a href="#labs">Labs</a></li>
-<li><a href="#formation">Formation</a></li>
-<li><a href="#ecrits">Écrits</a></li>
-<li><a href="#experience">Expérience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
+  <div class="container nav-inner">
+    <a href="#accueil" class="logo">AMADOU <span>BA.</span></a>
+
+    <button class="burger" id="burger"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="menu">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#travaux">Travaux</a></li>
+      <li><a href="#labs">Labs</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-cv" href="CV_Amadou_Ba.pdf" target="_blank" rel="noopener noreferrer">Mon CV <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+    </ul>
+  </div>
 </nav>
 
 <header class="hero" id="accueil">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow">ÉCONOMIE APPLIQUÉE · ÉCONOMÉTRIE · ANALYSE DE DONNÉES</div>
-<h1>Économie.<span>Données.</span>Décision.</h1>
-<p class="hero-text">J’analyse les données économiques, construis des modèles économétriques et transforme les résultats en informations utiles.</p>
-<p class="hero-description">Je suis <strong>Amadou Ba</strong>, titulaire d’un <strong>Master 2 en Analyse économique et quantitative</strong> à l’Université Gaston Berger de Saint-Louis. Je m’intéresse à l’économie appliquée, à l’économétrie, aux finances publiques et à l’analyse des politiques économiques.</p>
-<div class="hero-skills"><span class="skill">Analyse des données</span><span class="skill">Suivi-évaluation</span><span class="skill">Gestion de projets</span></div>
-<a href="#travaux" class="btn">Voir mes travaux <i class="fa-solid fa-arrow-down"></i></a>
-</div>
-<div class="hero-photo">
-<img src="photo.jpg" alt="Amadou Ba — Économiste" width="480" height="600">
-</div>
-</div>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">ÉCONOMIE APPLIQUÉE · ÉCONOMÉTRIE · DONNÉES</div>
+
+      <h1>Économie.<span>Données.</span>Décision.</h1>
+
+      <p class="hero-text">
+        J’analyse les données économiques et transforme les résultats quantitatifs en informations utiles à la décision.
+      </p>
+
+      <p class="hero-description">
+        Je suis <strong>Amadou Ba</strong>, titulaire d’un
+        <strong>Master 2 en Analyse économique et quantitative</strong>
+        de l’Université Gaston Berger de Saint-Louis. Je m’intéresse à
+        l’économétrie, aux finances publiques et à l’analyse des politiques économiques.
+      </p>
+
+      <div class="hero-skills">
+        <span class="skill">Analyse économique</span>
+        <span class="skill">Économétrie</span>
+        <span class="skill">Suivi-évaluation</span>
+        <span class="skill">Gestion de projets</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="CV_Amadou_Ba.pdf" class="btn btn-cv" download="CV_Amadou_Ba.pdf">
+          <i class="fa-solid fa-download"></i>
+          Télécharger mon CV
+        </a>
+        <a href="#travaux" class="btn btn-outline">
+          Découvrir mes travaux
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="photo.jpg" alt="Portrait d’Amadou Ba" width="480" height="600">
+    </div>
+  </div>
 </header>
 
-<section class="stats">
-<div class="container stats-grid">
-<div class="stat"><div class="stat-number">Master 2</div><div class="stat-title">Analyse économique et quantitative</div><p>Université Gaston Berger, Saint-Louis</p></div>
-<div class="stat"><div class="stat-number">Sénégal</div><div class="stat-title">Terrain d’étude</div><p>Dette publique et investissement</p></div>
-<div class="stat"><div class="stat-number">Économétrie</div><div class="stat-title">Outils</div><p>Stata · R · EViews · Scilab</p></div>
-<div class="stat"><div class="stat-number">Recherche</div><div class="stat-title">Mémoire</div><p>Efficacité de l’endettement du Sénégal</p></div>
-</div>
+<section class="stats" aria-label="Profil en bref">
+  <div class="container stats-grid">
+    <div class="stat">
+      <div class="stat-number">Master 2</div>
+      <div class="stat-title">Analyse économique et quantitative</div>
+      <p>Université Gaston Berger, Saint-Louis</p>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Sénégal</div>
+      <div class="stat-title">Terrain d’étude</div>
+      <p>Dette publique et investissement</p>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Stata · R</div>
+      <div class="stat-title">Analyse quantitative</div>
+      <p>EViews · Scilab · Excel</p>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Recherche</div>
+      <div class="stat-title">Mémoire soutenu</div>
+      <p>Dette publique et investissement au Sénégal</p>
+    </div>
+  </div>
 </section>
 
 <section id="about">
-<div class="container">
-<div class="section-header"><div class="section-number">01 / ABOUT</div><h2 class="section-title">À propos</h2></div>
-<div class="about-grid">
-<div><div class="about-label">Profil</div></div>
-<div class="about-text">
-<p>Mon orientation actuelle est l’analyse économique quantitative, avec un intérêt particulier pour l’économétrie, les données macroéconomiques et les politiques publiques.</p>
-<p>Je travaille avec <strong>Stata, R, EViews, Scilab et Excel</strong> pour traiter, analyser et interpréter des données économiques.</p>
-<p>Je m’intéresse notamment à la dette publique, à la croissance, aux finances publiques et aux questions de développement.</p>
-<p>Je cherche à transformer les données et les résultats économétriques en analyses claires et utiles à la décision.</p>
-<div class="skills">
-<span class="skill">Stata</span><span class="skill">R</span><span class="skill">EViews</span><span class="skill">Scilab</span><span class="skill">Excel</span><span class="skill">Économétrie</span><span class="skill">Analyse des données</span><span class="skill">Suivi-évaluation</span><span class="skill">Gestion de projets</span><span class="skill">Séries temporelles</span>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">01 / PROFIL</div>
+      <h2 class="section-title">À propos</h2>
+    </div>
+
+    <div class="about-grid">
+      <div><div class="about-label">Mon parcours</div></div>
+
+      <div class="about-text">
+        <p>
+          Mon parcours est orienté vers l’analyse économique quantitative,
+          avec un intérêt particulier pour l’économétrie, les données
+          macroéconomiques et les politiques publiques.
+        </p>
+        <p>
+          J’utilise <strong>Stata, R, EViews, Scilab et Excel</strong>
+          pour traiter, analyser et interpréter des données économiques.
+        </p>
+        <p>
+          Mes centres d’intérêt portent notamment sur la dette publique,
+          l’investissement, la croissance économique et le financement
+          du développement.
+        </p>
+        <p>
+          Je souhaite contribuer à des études économiques, des projets
+          de développement et des missions de suivi-évaluation en
+          produisant des analyses rigoureuses et accessibles.
+        </p>
+
+        <div class="skills">
+          <span class="skill">Stata</span>
+          <span class="skill">R</span>
+          <span class="skill">EViews</span>
+          <span class="skill">Scilab</span>
+          <span class="skill">Excel</span>
+          <span class="skill">Économétrie</span>
+          <span class="skill">Séries temporelles</span>
+          <span class="skill">Analyse de données</span>
+          <span class="skill">Finances publiques</span>
+          <span class="skill">Suivi-évaluation</span>
+          <span class="skill">Gestion de projets</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="projects" id="travaux">
-<div class="container">
-<div class="section-header"><div class="section-number">02 / SELECTED WORK</div><h2 class="section-title">Travaux</h2></div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">02 / PROJETS</div>
+      <h2 class="section-title">Travaux sélectionnés</h2>
+    </div>
 
-<article class="project">
-<div class="project-number">01</div>
-<div>
-<div class="project-category">Recherche économique · Économétrie</div>
-<h3>L’impact de la dette publique sur l’investissement</h3>
-<p class="project-description">Étude économétrique consacrée à l’analyse de l’impact de la dette publique sur l’investissement au Sénégal.</p>
-<p class="project-description">L’objectif est d’examiner la relation entre l’endettement public et l’investissement à partir de données macroéconomiques, en mobilisant des outils d’analyse économétrique et de séries temporelles.</p>
-<div class="tags"><span class="tag">Stata</span><span class="tag">Économétrie</span><span class="tag">Séries temporelles</span><span class="tag">Dette publique</span><span class="tag">Investissement</span></div>
-<a class="project-link" href="soutenance-amadou-ba.pdf" target="_blank" rel="noopener">Voir la présentation (PDF) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-</div>
-</article>
+    <article class="project">
+      <div class="project-number">01</div>
+      <div>
+        <div class="project-category">Mémoire · Économétrie</div>
+        <h3>Impact de la dette publique sur l’investissement au Sénégal</h3>
+        <p class="project-description">
+          Étude économétrique consacrée à la relation entre l’endettement
+          public et l’investissement au Sénégal à partir de données
+          macroéconomiques et d’outils d’analyse des séries temporelles.
+        </p>
+        <p class="project-description">
+          Le travail vise à examiner les mécanismes par lesquels la dette
+          publique peut influencer la dynamique de l’investissement.
+        </p>
+        <div class="tags">
+          <span class="tag">Stata</span>
+          <span class="tag">Économétrie</span>
+          <span class="tag">Séries temporelles</span>
+          <span class="tag">Dette publique</span>
+          <span class="tag">Investissement</span>
+        </div>
+        <a class="project-link" href="soutenance-amadou-ba.pdf" target="_blank" rel="noopener noreferrer">
+          Voir la présentation PDF
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </article>
 
-<article class="project">
-<div class="project-number">02</div>
-<div>
-<div class="project-category">Analyse économique · Recherche</div>
-<h3>Dette publique &amp; croissance économique</h3>
-<p class="project-description">Une analyse de la relation entre l’endettement public, la croissance économique, l’investissement et plusieurs variables macroéconomiques.</p>
-<div class="tags"><span class="tag">Stata</span><span class="tag">Régression</span><span class="tag">Données macroéconomiques</span><span class="tag">Analyse quantitative</span></div>
-</div>
-</article>
+    <article class="project">
+      <div class="project-number">02</div>
+      <div>
+        <div class="project-category">Analyse économique · Recherche</div>
+        <h3>Dette publique et croissance économique</h3>
+        <p class="project-description">
+          Analyse de la relation entre endettement public, croissance
+          économique, investissement et variables macroéconomiques.
+          Ce projet permet d’étudier les interactions entre financement
+          public et performances économiques.
+        </p>
+        <div class="tags">
+          <span class="tag">Stata</span>
+          <span class="tag">Régression</span>
+          <span class="tag">Données macroéconomiques</span>
+          <span class="tag">Analyse quantitative</span>
+        </div>
+      </div>
+    </article>
 
-<article class="project">
-<div class="project-number">03</div>
-<div>
-<div class="project-category">Gestion · Suivi-évaluation</div>
-<h3>Suivi &amp; évaluation de projets</h3>
-<p class="project-description">Travaux et intérêt professionnel autour du suivi, de l’évaluation et de la gestion de projets, avec une approche orientée vers les données et les indicateurs de résultats.</p>
-<div class="tags"><span class="tag">Gestion de projet</span><span class="tag">Suivi-évaluation</span><span class="tag">Excel</span><span class="tag">Analyse</span></div>
-</div>
-</article>
-</div>
+    <article class="project">
+      <div class="project-number">03</div>
+      <div>
+        <div class="project-category">Gestion · Suivi-évaluation</div>
+        <h3>Suivi et évaluation de projets</h3>
+        <p class="project-description">
+          Intérêt professionnel pour la conception d’indicateurs,
+          le suivi des activités, l’analyse des résultats et la
+          préparation de rapports d’aide à la décision.
+        </p>
+        <div class="tags">
+          <span class="tag">Gestion de projet</span>
+          <span class="tag">Suivi-évaluation</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Indicateurs</span>
+        </div>
+      </div>
+    </article>
+  </div>
 </section>
 
 <section class="labs" id="labs">
-<div class="container">
-<div class="section-header"><div class="section-number">03 / LABS &amp; ANALYSES</div><h2 class="section-title">Labs</h2></div>
-<div class="labs-grid">
-<div class="lab"><div class="lab-number">01</div><h3>Dette publique du Sénégal</h3><p>Analyses et visualisations autour de l’évolution de la dette publique, du déficit et de leurs implications pour les finances publiques.</p><div class="tags"><span class="tag">Économie publique</span><span class="tag">Données</span><span class="tag">Analyse quantitative</span></div><a class="lab-link" href="analyse-dette-senegal.pdf" target="_blank" rel="noopener">Lire l’analyse (PDF) <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-<div class="lab"><div class="lab-number">02</div><h3>Énergie &amp; finances publiques</h3><p>Réflexions quantitatives sur les subventions énergétiques, les dépenses publiques et les mécanismes de financement.</p><div class="tags"><span class="tag">Économie de l’énergie</span><span class="tag">Politiques publiques</span><span class="tag">Données</span></div></div>
-<div class="lab"><div class="lab-number">03</div><h3>Économétrie appliquée</h3><p>Expérimentations et analyses utilisant des modèles économétriques pour étudier des phénomènes économiques.</p><div class="tags"><span class="tag">Stata</span><span class="tag">R</span><span class="tag">EViews</span><span class="tag">Séries temporelles</span></div></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">03 / ANALYSES</div>
+      <h2 class="section-title">Labs & analyses</h2>
+    </div>
+
+    <div class="labs-grid">
+      <article class="lab">
+        <div class="lab-number">01 / FINANCES PUBLIQUES</div>
+        <h3>Dette publique du Sénégal</h3>
+        <p>
+          Analyses de l’évolution de la dette publique, du déficit
+          budgétaire et de leurs implications pour les finances publiques.
+        </p>
+        <div class="tags">
+          <span class="tag">Économie publique</span>
+          <span class="tag">Données</span>
+          <span class="tag">Analyse quantitative</span>
+        </div>
+        <a class="lab-link" href="analyse-dette-senegal.pdf" target="_blank" rel="noopener noreferrer">
+          Lire l’analyse <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </article>
+
+      <article class="lab">
+        <div class="lab-number">02 / POLITIQUES PUBLIQUES</div>
+        <h3>Énergie et finances publiques</h3>
+        <p>
+          Réflexions sur les subventions énergétiques, les dépenses
+          publiques et les mécanismes de financement.
+        </p>
+        <div class="tags">
+          <span class="tag">Énergie</span>
+          <span class="tag">Finances publiques</span>
+          <span class="tag">Politiques publiques</span>
+        </div>
+      </article>
+
+      <article class="lab">
+        <div class="lab-number">03 / MÉTHODES QUANTITATIVES</div>
+        <h3>Économétrie appliquée</h3>
+        <p>
+          Analyses mobilisant des modèles économétriques pour étudier
+          les phénomènes économiques et interpréter les résultats.
+        </p>
+        <div class="tags">
+          <span class="tag">Stata</span>
+          <span class="tag">R</span>
+          <span class="tag">EViews</span>
+          <span class="tag">Séries temporelles</span>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 
 <section class="education" id="formation">
-<div class="container">
-<div class="section-header"><div class="section-number">04 / EDUCATION</div><h2 class="section-title">Formation</h2></div>
-<div class="education-list">
-<div class="education-item"><div class="education-date">2024 — 2025</div><div><h3>Master 2 — Analyse économique et quantitative</h3><p>Formation en analyse économique, économétrie, statistiques et méthodes quantitatives.</p></div><div class="education-place">Université Gaston Berger<br>Saint-Louis</div></div>
-<div class="education-item"><div class="education-date">2023 — 2024</div><div><h3>Master 1 — Analyse économique et quantitative</h3><p>Première année de master : économie, statistiques et méthodes quantitatives.</p></div><div class="education-place">Université Gaston Berger<br>Saint-Louis</div></div>
-<div class="education-item"><div class="education-date">2021 — 2023</div><div><h3>Licence — Économie appliquée</h3><p>Formation en économie appliquée et analyse économique.</p></div><div class="education-place">Université Gaston Berger<br>Saint-Louis</div></div>
-<div class="education-item"><div class="education-date">Baccalauréat</div><div><h3>Baccalauréat</h3><p>Diplôme de fin d’études secondaires.</p></div><div class="education-place">Sénégal</div></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">04 / ÉTUDES</div>
+      <h2 class="section-title">Formation</h2>
+    </div>
+
+    <div class="education-list">
+      <article class="education-item">
+        <div class="education-date">2024 — 2025</div>
+        <div>
+          <h3>Master 2 — Analyse économique et quantitative</h3>
+          <p>
+            Formation en analyse économique, économétrie, statistiques
+            et méthodes quantitatives. Mémoire soutenu sur l’impact
+            de la dette publique sur l’investissement au Sénégal.
+          </p>
+        </div>
+        <div class="education-place">
+          Université Gaston Berger<br>Saint-Louis, Sénégal
+        </div>
+      </article>
+
+      <article class="education-item">
+        <div class="education-date">2023 — 2024</div>
+        <div>
+          <h3>Master 1 — Analyse économique et quantitative</h3>
+          <p>Économie, statistiques et méthodes quantitatives.</p>
+        </div>
+        <div class="education-place">
+          Université Gaston Berger<br>Saint-Louis, Sénégal
+        </div>
+      </article>
+
+      <article class="education-item">
+        <div class="education-date">2021 — 2023</div>
+        <div>
+          <h3>Licence — Économie appliquée</h3>
+          <p>Formation en économie appliquée et analyse économique.</p>
+        </div>
+        <div class="education-place">
+          Université Gaston Berger<br>Saint-Louis, Sénégal
+        </div>
+      </article>
+
+      <article class="education-item">
+        <div class="education-date">Baccalauréat</div>
+        <div>
+          <h3>Baccalauréat</h3>
+          <p>Diplôme de fin d’études secondaires.</p>
+        </div>
+        <div class="education-place">Sénégal</div>
+      </article>
+    </div>
+  </div>
 </section>
 
 <section id="ecrits">
-<div class="container">
-<div class="section-header"><div class="section-number">05 / ANALYSES</div><h2 class="section-title">Écrits</h2></div>
-<div class="analysis-grid">
-<div class="analysis-card"><h3>Analyses économiques</h3><p>Dette publique · Croissance · Finances publiques</p></div>
-<div class="analysis-card"><h3>Recherche</h3><p>Économétrie · Politiques publiques · Données</p></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">05 / PUBLICATIONS</div>
+      <h2 class="section-title">Écrits & analyses</h2>
+    </div>
+
+    <div class="analysis-grid">
+      <article class="analysis-card">
+        <h3>Analyses économiques</h3>
+        <p>Dette publique · Croissance · Investissement · Finances publiques</p>
+      </article>
+      <article class="analysis-card">
+        <h3>Recherche quantitative</h3>
+        <p>Économétrie · Séries temporelles · Politiques publiques · Données</p>
+      </article>
+    </div>
+  </div>
 </section>
 
 <section class="experience" id="experience">
-<div class="container">
-<div class="section-header"><div class="section-number">06 / EXPERIENCE</div><h2 class="section-title">Expérience</h2></div>
-<div class="experience-item"><div class="experience-company">Tivaouane Basket Club</div><div><h3>Comptable</h3><p>Suivi des dépenses et recettes, élaboration de bilans financiers et de rapports budgétaires, avec appui à la prise de décision financière.</p></div><div class="experience-date">2023 — 2024</div></div>
-<div class="experience-item"><div class="experience-company">Tivaouane Basket Club</div><div><h3>Community Manager</h3><p>Gestion et animation des réseaux sociaux, promotion des activités sportives et contribution à la mobilisation des supporters et partenaires.</p></div><div class="experience-date">2023 — 2024</div></div>
-<div class="experience-item"><div class="experience-company">Association And Defar Ndoutt</div><div><h3>Vice-président</h3><p>Coordination d’activités communautaires et sociales, participation à la gestion de projets locaux et actions de solidarité.</p></div><div class="experience-date">2020 — 2022</div></div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-number">06 / PARCOURS</div>
+      <h2 class="section-title">Expérience</h2>
+    </div>
+
+    <article class="experience-item">
+      <div class="experience-company">Tivaouane Basket Club</div>
+      <div>
+        <h3>Comptable</h3>
+        <p>
+          Suivi des dépenses et recettes, préparation de bilans financiers
+          et de rapports budgétaires, avec appui à la prise de décision
+          financière.
+        </p>
+      </div>
+      <div class="experience-date">2023 — 2024</div>
+    </article>
+
+    <article class="experience-item">
+      <div class="experience-company">Tivaouane Basket Club</div>
+      <div>
+        <h3>Community Manager</h3>
+        <p>
+          Gestion et animation des réseaux sociaux, promotion des activités
+          sportives et communication avec les supporters et partenaires.
+        </p>
+      </div>
+      <div class="experience-date">2023 — 2024</div>
+    </article>
+
+    <article class="experience-item">
+      <div class="experience-company">Association And Defar Ndoutt</div>
+      <div>
+        <h3>Vice-président</h3>
+        <p>
+          Participation à la coordination d’activités communautaires,
+          à la gestion de projets locaux et aux actions de solidarité.
+        </p>
+      </div>
+      <div class="experience-date">2020 — 2022</div>
+    </article>
+  </div>
 </section>
 
 <section class="contact" id="contact">
-<div class="container contact-grid">
-<div>
-<h2>Construisons quelque chose d’utile.</h2>
-<p class="contact-text">Vous avez un projet d’étude, une analyse économique, une mission de suivi-évaluation ou un projet nécessitant une approche quantitative ?</p>
-<div class="social-title">Follow me on</div>
-<div class="socials">
-<a href="https://x.com/amadou_at_tijan?s=11" target="_blank" rel="noopener noreferrer" class="social" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="https://www.linkedin.com/in/amadou-ba-037159374/" target="_blank" rel="noopener noreferrer" class="social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-<a href="https://www.facebook.com/share/1Lmk3AGCWk/" target="_blank" rel="noopener noreferrer" class="social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/amadou_at_tijani/" target="_blank" rel="noopener noreferrer" class="social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-</div>
-</div>
-<div class="contact-info">
-<a href="mailto:amadouba211019@gmail.com" class="contact-link">amadouba211019@gmail.com</a>
-<a href="tel:+221772503248" class="contact-link">+221 77 250 32 48</a>
-</div>
-</div>
+  <div class="container contact-grid">
+    <div>
+      <div class="section-number">07 / CONTACT</div>
+      <h2>Construisons quelque chose d’utile.</h2>
+      <p class="contact-text">
+        Je suis ouvert aux opportunités professionnelles en analyse
+        économique, études quantitatives, suivi-évaluation et gestion
+        de projets. Contactez-moi pour échanger sur une opportunité
+        d’emploi, de stage ou de collaboration.
+      </p>
+
+      <a href="mailto:amadouba211019@gmail.com?subject=Opportunit%C3%A9%20professionnelle"
+         class="btn">
+        <i class="fa-solid fa-paper-plane"></i>
+        Me contacter
+      </a>
+
+      <div class="social-title">Retrouvez-moi en ligne</div>
+      <div class="socials">
+        <a href="https://x.com/amadou_at_tijan"
+           target="_blank" rel="noopener noreferrer"
+           class="social" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amadou-ba-037159374/"
+           target="_blank" rel="noopener noreferrer"
+           class="social" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1Lmk3AGCWk/"
+           target="_blank" rel="noopener noreferrer"
+           class="social" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/amadou_at_tijani/"
+           target="_blank" rel="noopener noreferrer"
+           class="social" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <a href="mailto:amadouba211019@gmail.com" class="contact-link">
+        <i class="fa-regular fa-envelope"></i>
+        amadouba211019@gmail.com
+      </a>
+      <a href="tel:+221772503248" class="contact-link">
+        <i class="fa-solid fa-phone"></i>
+        +221 77 250 32 48
+      </a>
+      <a href="CV_Amadou_Ba.pdf" target="_blank"
+         rel="noopener noreferrer" class="contact-link">
+        <i class="fa-regular fa-file-pdf"></i>
+        Consulter mon CV
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
-<div class="container footer-inner">
-<div class="footer-logo">AMADOU BA</div>
-<p>© 2026 Amadou Ba — Économie appliquée &amp; analyse quantitative</p>
-</div>
+  <div class="container footer-inner">
+    <div class="footer-logo">AMADOU BA.</div>
+    <p>© 2026 Amadou Ba — Économie appliquée & analyse quantitative</p>
+    <a href="#accueil" aria-label="Retour en haut">
+      <i class="fa-solid fa-arrow-up"></i> Haut de page
+    </a>
+  </div>
 </footer>
 
 <script>
-const b=document.getElementById('burger'),m=document.getElementById('menu');
-b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+burger.addEventListener("click", function () {
+  const isOpen = menu.classList.toggle("open");
+  burger.setAttribute("aria-expanded", String(isOpen));
+  burger.setAttribute(
+    "aria-label",
+    isOpen ? "Fermer le menu" : "Ouvrir le menu"
+  );
+
+  const icon = burger.querySelector("i");
+  icon.classList.toggle("fa-bars", !isOpen);
+  icon.classList.toggle("fa-xmark", isOpen);
+});
+
+menu.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    menu.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Ouvrir le menu");
+
+    const icon = burger.querySelector("i");
+    icon.classList.add("fa-bars");
+    icon.classList.remove("fa-xmark");
+  });
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    menu.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Ouvrir le menu");
+
+    const icon = burger.querySelector("i");
+    icon.classList.add("fa-bars");
+    icon.classList.remove("fa-xmark");
+  }
+});
 </script>
+
 </body>
 </html>
